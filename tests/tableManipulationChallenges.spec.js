@@ -114,7 +114,7 @@ describe('Desafios de manipulação de tabelas', () => {
       });
     });
 
-    describe.only("24 - Atualize os dados da coluna 'discount' da tabela 'order_details' para 45, onde o valor na coluna 'unit_price' seja maior que 10.0000 e o id seja um número entre 30 e 40", () => {
+    describe("24 - Atualize os dados da coluna 'discount' da tabela 'order_details' para 45, onde o valor na coluna 'unit_price' seja maior que 10.0000 e o id seja um número entre 30 e 40", () => {
       it('Verifica o desafio24', async () => {
         const challengeQuery = readFileSync('desafio24.sql', 'utf8').trim();
 
@@ -132,7 +132,7 @@ describe('Desafios de manipulação de tabelas', () => {
   describe('Queries de deleção', () => {
     const countOrderDetailsQuery = 'SELECT COUNT(*) AS details_count FROM order_details;';
 
-    describe("25 - Delete todos os dados na coluna 'unit_price' da tabela 'order_details' em que o valor seja menor que 10.0000", () => {
+    describe.only("25 - Delete todos os dados na coluna 'unit_price' da tabela 'order_details' em que o valor seja menor que 10.0000", () => {
       it('Verifica o desafio25', async () => {
         const challengeQuery = readFileSync('desafio25.sql', 'utf8').trim();
 
