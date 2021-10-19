@@ -86,7 +86,7 @@ describe('Desafios de manipulação de tabelas', () => {
     const countOrderDetailsByDiscountQuery = (discount) =>
       `SELECT COUNT(*) AS details_count FROM order_details WHERE discount = ${discount};`;
 
-    describe.only("22 - Atualize os dados na coluna 'discount' da tabela 'order_details' para 15", () => {
+    describe("22 - Atualize os dados na coluna 'discount' da tabela 'order_details' para 15", () => {
       it('Verifica o desafio22', async () => {
         const challengeQuery = readFileSync('desafio22.sql', 'utf8').trim();
 
@@ -100,7 +100,7 @@ describe('Desafios de manipulação de tabelas', () => {
       });
     });
 
-    describe("23 - Atualize os dados da coluna 'discount' da tabela 'order_details' para 30, onde o valor na coluna 'unit_price' seja menor que 10.0000", () => {
+    describe.only("23 - Atualize os dados da coluna 'discount' da tabela 'order_details' para 30, onde o valor na coluna 'unit_price' seja menor que 10.0000", () => {
       it('Verifica o desafio23', async () => {
         const challengeQuery = readFileSync('desafio23.sql', 'utf8').trim();
 
